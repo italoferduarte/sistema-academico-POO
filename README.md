@@ -1,7 +1,7 @@
 # Sistema Acadêmico Simplificado — Atividade Integradora (Java e POO)
 
 ## Contextualização
-Trabalho da **UniAteneu**, disciplina **Laboratório de Programação Orientada a Objetos**, tema *Sistema Acadêmico Simplificado* (conteúdos das Aulas 01 a 08). A **Parte I** (questões teóricas) é entregue em PDF próprio; este repositório contém a **Parte II** (implementação prática).
+Trabalho da **UniAteneu**, disciplina **Laboratório de Programação Orientada a Objetos**, tema *Sistema Acadêmico Simplificado* (conteúdos das Aulas 01 a 08). A **Parte I** (questões teóricas) é entregue em TXT próprio; este repositório contém a **Parte II** (implementação prática).
 
 ## Objetivo
 Implementar, em Java 21 e no terminal, um fluxo de matrícula que demonstra POO (encapsulamento, associação, herança, polimorfismo) e seis padrões de projeto: Singleton, Strategy, Observer, Adapter, Factory Method e Facade.
