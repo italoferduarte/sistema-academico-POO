@@ -1,0 +1,207 @@
+﻿ATIVIDADE INTEGRADORA — JAVA E POO  
+
+
+       Aluno: Italo Fernandes Duarte Matrícula: 20251113797 Curso: Ciência da Computação.
+Tema: Sistema Acadêmico Simplificado | Duração: 3 horas | Modalidade: trios | Ambiente: VS Code e JDK 21
+Objetivo: revisar, explicar e aplicar os conteúdos das Aulas 01 a 08. A atividade é dividida em duas partes de 90 minutos: questões teóricas e construção guiada de um sistema Java.
+Parte I — Questões teóricas (90 minutos)
+Bloco A — Fundamentos de POO
+1. Explique a diferença entre classe e objeto. Apresente um exemplo de cada um em um sistema acadêmico.
+R - Classe seria a ficha de um personagem ou de itens, enquanto objeto seria o machado, a espada e o arco. Em forma prática, um cria a ficha e o outro a existência. 
+2. O que são atributos e métodos? Diferencie estado e comportamento de um objeto.
+R - Em jogo de RPG, o atributo seria as características ou variáveis da classe, como: nome, vida, mana, nível e os métodos seriam as ações, como atacar, curar. Um é sobre como são suas informações e o outro faz as ações dessa classe. 
+3. Qual é a função de new? Diferencie criar um objeto e declarar uma referência.
+R - Para aquele objeto existir, precisa ter um espaço, "new" faz ele ocupar um pouco da ram na hora da execução. 
+4. Explique encapsulamento. Por que evitar atributos públicos sem necessidade?
+R - Se ela estiver pública, qualquer alteração pode ser feita nas classes sem métodos; ela privada só poderá alterar utilizando dois métodos, como: getters e setters.
+5. Qual é a finalidade do construtor? Explique o uso de this.
+R - O construtor serve para que o objeto inicie com todas as características. O “this”' seria sua definição de existência no código. 
+Bloco B — Relacionamentos e herança
+6. Diferencie associação, agregação e composição; exemplifique.
+R - Associação: as classes genéricas onde qualquer objeto pode usar sem ter apropriação própria. Agregação: um objeto pode ter outro objeto genérico, onde necessariamente não é dele, pois continua a existir mesmo com a exclusão do objeto por cima. Composição: seria um objeto ligado, onde ele só existe se o objeto pai existe 
+  
+
+7. O que é ArrayList e quando preferi-lo a um vetor de tamanho fixo?
+R -A rrayList é volátil (dinâmico), pois altera de tamanho conforme a adição ou remoção de objetos. Precisamos de um tamanho definido para definirmos um vetor fixo 
+8. Diferencie superclasse e subclasse. Explique extends e super
+.R - A superclasse seria uma classe principal genérica, como todos os personagens de um jogo, enquanto a subclasse herda tudo da superclasse, mas com suas adições de características próprias
+9. Diferencie sobrecarga e sobrescrita de métodos; dê exemplos.
+R - Sobrecarga cria variações de uma ação dentro do próprio objeto, como: lugar, características e funções, enquanto a sobrescrita altera o comportamento através de herança.
+10. O que é polimorfismo? Como uma referência de superclasse aponta para objetos de subclasses?
+R - Ao invés de usar o objeto com todas as suas subclasses, podemos usar classes específicas para uma determinada tarefa.
+Bloco C — Interfaces e projeto
+11. O que é interface? Diferencie implements e extends nos exemplos estudados.
+R - A interface é o que define o que as classes farão, mas sem dizer como será feito. Extends: uma classe filha (dependente) herda de uma classe mãe (independente). Implements: uma classe decide adotar regras de uma interface e, com essas regras, ela conseguirá realizar novas ações. . 
+12. Compare herança e composição. Quando a composição é preferível?
+R - Herança é quando uma classe filha 'é uma' extensão da classe mãe, dependendo dela para existir. Composição é quando uma classe 'tem um' objeto dentro dela, funcionando de forma independente. A composição é preferível para evitar que alterações na classe mãe quebrem o código inteiro e para podermos mudar as características do objeto no meio da execução. 
+13. O que é baixo acoplamento? Como a injeção por construtor ajuda?
+R - Baixo acoplamento é o nível de independência das classes no código, onde uma não precisa saber como a outra funciona por dentro. A injeção por construtor ajuda entregando o objeto pronto na hora do 'new' da ficha, fazendo com que o personagem possa receber qualquer arma ou característica sem ficar preso a uma só.
+14. Explique SRP, OCP e DIP com exemplos simples.
+R - SRP significa que a ficha do personagem só cuida dos dados dele, deixando tarefas como salvar o jogo para outras classes. OCP permite adicionar novos heróis ou itens no jogo sem precisar mexer ou arriscar quebrar o código que já funciona. DIP faz o herói depender de uma interface genérica de arma, permitindo que ele equipe qualquer item sem ficar preso a uma classe concreta.
+Bloco D — Padrões de projeto
+15. O que é um padrão de projeto? Por que evitar aplicá-lo indiscriminadamente?
+R - Padrão de projeto soluciona um problema específico de lógica, agindo solo ou em conjunto com algumas classes. Ele não define as tecnologias ou o banco de dados, pois a sua ideia principal é primeiro entender o conceito do problema e depois fazer a estruturação desse conceito na lógica do código. 
+16. Explique Singleton e a finalidade do construtor privado e de getInstancia().
+R - Singleton seria um padrão de projeto onde uma classe teria somente um objeto rodando na ram. Ficando global, qualquer classe poderia acessar. O construtor privado serve para trancar a porta de entrada da classe, onde não há acesso direto externo. 
+17. Explique Factory Method e o papel dos criadores abstratos e concretos.
+R - Factory Method serve para tirar o new do código principal e jogar para uma classe que só serve para fabricar objeto. O criador abstrato é só a regra dizendo o que a fábrica tem que fazer, e o criador concreto é a fábrica de verdade que dá o new na parada que você quer. 
+18. Como Strategy organiza descontos comuns, estudantis e promocionais?
+R  - Strategy faz com que cada cálculo vire uma classe independente, que assina a mesma interface.
+19. Como Observer comunica um pedido confirmado a estoque, financeiro e auditoria?
+R - Observer serve como um notificador de pedidos para alteração de estoque, envio para o financeiro ou monitoramento da auditoria, mudando as ações conforme o fluxo acontece. 
+20. Diferencie Adapter e Facade; dê um caso de uso de cada um.
+R - Adapter serve para conectar duas classes que usam códigos ou formatos totalmente incompatíveis, funcionando como um adaptador de tomada de viagem. Facade serve para esconder a bagunça de um sistema complexo e cheio de classes diferentes, criando uma interface simples com um botão só para resolver tudo de uma vez.
+ Parte II — Construção prática guiada (90 minutos)
+Projeto: Sistema Acadêmico Simplificado. O sistema cadastra aluno e curso, aplica desconto, registra pagamento em um serviço legado, notifica observadores e emite comprovante. Os exemplos abaixo usam classes sem package para simplificar a execução.
+Cronograma
+   * 0–15 min: modelagem de Aluno e Curso; Singleton de configuração.
+   * 15–30 min: Strategy para políticas de desconto.
+   * 30–45 min: Observer para notificações.
+   * 45–60 min: Adapter para o sistema de pagamentos.
+   * 60–75 min: Factory Method e Facade.
+   * 75–90 min: compilação, testes e análise.
+Etapa 1 — Classes, objetos e encapsulamento
+Crie Curso.java. O construtor valida os dados; os atributos private final preservam a referência/valor após a inicialização. Os getters oferecem leitura controlada.
+  
+
+
+
+Crie Aluno.java com nome validado e uma coleção ArrayList<Curso>. Implemente adicionarCurso(Curso), getNome() e getQuantidadeCursos(). A lista representa a associação entre aluno e cursos; não há exigência de destruir Curso quando Aluno deixa de existir.
+Etapa 2 — Strategy: políticas de desconto
+Crie a interface Desconto.java e duas implementações. A interface estabelece um contrato; o cliente utiliza aplicar sem depender da classe concreta. Em R$ 200,00, a política estudantil resulta em R$ 180,00.
+  
+
+Etapa 3 — Observer: comunicação de eventos
+Crie ObservadorMatricula, AvisoEmail e Auditoria. O serviço manterá uma List<ObservadorMatricula>, permitirá inscrição e chamará atualizar em cada observador depois da matrícula. As mensagens são simuladas no terminal.
+  
+
+
+
+Etapa 4 — Adapter: integração de pagamento
+O sistema legado aceita centavos inteiros; a aplicação utiliza reais. O adaptador implementa o contrato esperado e converte a unidade. Para sistemas financeiros reais, substitua double por uma representação monetária adequada, como BigDecimal.
+  
+
+
+
+Etapa 5 — Factory Method: comprovantes
+Crie a interface Comprovante e duas implementações, ComprovanteTexto e ComprovanteResumido. O criador abstrato define o fluxo emitir e delega a criação para subclasses concretas.
+  
+
+
+
+  
+
+
+
+Implemente CriadorTexto e CriadorResumido, sobrescrevendo criar() para retornar a implementação apropriada. Explique como @Override, herança e polimorfismo tornam possível variar o formato.
+Etapa 6 — Facade: simplificar o caso de uso
+A fachada expõe uma operação de alto nível. Ela coordena o serviço de matrícula e o criador de comprovantes, mantendo Main simples.
+  
+
+
+
+Etapa 7 — Implementação de referência completa
+O código a seguir integra todas as etapas, incluindo Singleton, ServicoMatricula e Main. Salve-o como src/Main.java em um projeto separado de referência. Para desenvolver as etapas individualmente, separe as classes em arquivos próprios e evite duplicar declarações.
+  
+
+  
+}
+
+
+class Curso {
+private final String titulo; private final double preco;
+public Curso(String titulo, double preco) {
+if (titulo == null || titulo.isBlank() || preco <= 0) throw new IllegalArgumentException("Dados inválidos");
+this.titulo = titulo; this.preco = preco;
+}
+public String getTitulo() { return titulo; } public double getPreco() { return preco; }
+}
+
+
+interface ObservadorMatricula { void atualizar(String mensagem); } class AvisoEmail implements ObservadorMatricula {
+public void atualizar(String mensagem) { System.out.println("E-mail: " + mensagem); }
+}
+class Auditoria implements ObservadorMatricula {
+public void atualizar(String mensagem) { System.out.println("Auditoria: " + mensagem); }
+}
+
+
+interface Comprovante { String gerar(Aluno aluno, Curso curso, double valor); } class ComprovanteTexto implements Comprovante {
+public String gerar(Aluno aluno, Curso curso, double valor) {
+return "Matrícula: " + aluno.getNome() + " / " + curso.getTitulo() + " / R$ " + valor;
+}
+}
+class ComprovanteResumido implements Comprovante {
+public String gerar(Aluno aluno, Curso curso, double valor) { return aluno.getNome() + " - R$ " + valor;
+}
+}
+abstract class CriadorComprovante { public abstract Comprovante criar();
+public String emitir(Aluno aluno, Curso curso, double valor) { return criar().gerar(aluno, curso, valor);
+}
+}
+class CriadorTexto extends CriadorComprovante {
+public Comprovante criar() { return new ComprovanteTexto(); }
+}
+class CriadorResumido extends CriadorComprovante {
+public Comprovante criar() { return new ComprovanteResumido(); }
+}
+
+
+class SistemaLegado {
+public void registrarEmCentavos(int centavos) { System.out.println("Legado registrou: " + centavos + " centavos"); }
+}
+interface RegistradorPagamento { void registrar(double reais); } class AdaptadorPagamento implements RegistradorPagamento {
+private final SistemaLegado legado;
+public AdaptadorPagamento(SistemaLegado legado) { this.legado = legado; }
+public void registrar(double reais) { legado.registrarEmCentavos((int) Math.round(reais * 100)); }
+}
+
+
+class ServicoMatricula {
+private final Desconto desconto;
+private final RegistradorPagamento pagamento;
+private final List<ObservadorMatricula> observadores = new ArrayList<>(); public ServicoMatricula(Desconto desconto, RegistradorPagamento pagamento) {
+this.desconto = desconto; this.pagamento = pagamento;
+
+
+  
+
+
+
+Como compilar e executar  
+
+
+Compare a saída com os eventos esperados: registro do pagamento em centavos, notificação por e-mail e auditoria, comprovante e quantidade de cursos do aluno.
+Etapa 8 — Perguntas de análise da implementação
+1. Qual classe implementa Singleton e quais instruções controlam a instância?
+B - A classe Configuracao usa o padrão Singleton. Ela tem um construtor privado e um método getInstancia() para acessar a mesma instância. 
+2. Onde aparecem encapsulamento e validação?
+B - O encapsulamento aparece nos atributos privados das classes. A validação serve para verificar se os dados estão corretos antes de serem usados.
+3. Qual é a relação entre Aluno e Curso?
+R - Um aluno pode estar matriculado em um ou mais cursos.
+4. Onde foi utilizada uma coleção e com qual objetivo?
+R - Foi usada uma ArrayList para guardar os cursos de um aluno e permitir adicionar mais cursos quando necessário. 
+5. Qual é o papel da interface Desconto?
+R - A interface Desconto define como uma classe deve aplicar um desconto. Assim, podemos ter diferentes tipos de desconto. 
+6. Como acrescentar uma política de 20% sem alterar o serviço?
+R - Podemos criar uma nova classe que implemente Desconto e aplique 20% de desconto. Depois, usamos essa classe no serviço sem precisar alterar seu código.
+7. Quem produz o evento e quem recebe as notificações?
+R - A classe ServicoMatricula gera o evento. As classes AvisoEmail e Auditoria recebem as notificações.
+8. Por que o adaptador converte reais em centavos?
+ R - Porque o sistema antigo trabalha com centavos, enquanto o outro sistema usa reais. O adaptador faz essa conversão para que os dois funcionem juntos.
+9. Qual método representa Factory Method?
+O método criar(), da classe CriadorComprovante, representa o Factory Method. Ele é usado para criar o comprovante sem precisar conhecer todos os detalhes da criação.
+
+
+10. O que FachadaAcademica simplifica para Main?
+
+
+
+
+Critérios de avaliação e entrega
+   * Questões teóricas: 5,0 pontos.
+   * Implementação e funcionamento: 3,0 pontos.
+   * Aplicação correta dos padrões: 1,0 ponto.
+   * Testes e análise: 1,0 ponto.
+   * Total: 10,0 pontos.
+Entrega: respostas teóricas em PDF; arquivos-fonte .java; captura de tela da execução; respostas às perguntas de análise. O código de referência é material de apoio para estudo e conferência.
